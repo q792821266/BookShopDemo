@@ -6,6 +6,14 @@
 
 This is a sample project that demonstrates how to build a simple shopping cart system using Spring Boot and related technologies.
 
+
+## API Design Philosophy
+
+- **Restful Principles**: The API design strictly adheres to Restful principles, ensuring consistency and predictability. This makes it easy for developers to understand and use the APIs.
+- **Resource-Oriented**: Each API endpoint represents a specific resource, and HTTP methods (GET, POST, PUT, DELETE) are used to perform CRUD operations on these resources.
+- **Stateless**: APIs are designed to be stateless, allowing for better scalability and easier integration with caching mechanisms.
+
+
 ## Features
 
 - Add items to the shopping cart
@@ -14,14 +22,17 @@ This is a sample project that demonstrates how to build a simple shopping cart s
 
 ## Technology Stack
 
-- **Spring Boot**: For building microservices
-- **Spring Data JPA**: For data access layer
-- **H2**: For database storage
+- **Java 17**: For core programming
+- **Spring Boot**: As the primary backend framework, Spring Boot provides rapid microservices development capabilities. Its rich ecosystem simplifies daily development tasks such as integrating security frameworks and database access.  
+- **Spring Data JPA**: Simplifies object-relational mapping (ORM), making database interactions more straightforward and maintainable.
+- **H2**: An in-memory database used for development and testing purposes, providing fast and reliable data storage.
 - **Maven**: For build management
 - **Swagger**: For API documentation
 - **JUnit**: For testing
-- **Lombok**: For reducing boilerplate code
-- **mapStructure**: For mapping between DTOs and Entities
+- **Lombok**: Reduces boilerplate code by automatically generating getters, setters, constructors, and other common methods.
+- **mapStructure**: Simplifies the mapping between objects, reducing the need for manual mapping code.
+
+
 
 ## Installation
 
@@ -50,10 +61,25 @@ spring:
     password: ''
 ```
 ### 4. Start the Application
+1. Run the application using Maven
+
 ```bash
 mvn spring-boot:run
 ```
-or running in your IDE
+
+2. Run the application using Docker:  
+
+build image：
+```Bash
+docker build --build-arg version=1.0.0 --build-arg artifactId=bookShopDemo -t bookShopDemo-image .
+```
+
+run container：
+```Bash
+docker run -p 8080:8080 -it --name bookShopDemo-container bookShopDemo-image
+```
+
+3. Run the application using your IDE
 
 ## Usage
 ### You can visit the springDOC page to see the API documentation

@@ -1,7 +1,5 @@
 package com.example.bookShopDemo.service.impl;
 
-import com.example.bookShopDemo.mapper.BookMapper;
-import com.example.bookShopDemo.model.dto.BookDTO;
 import com.example.bookShopDemo.model.dto.ShoppingCartItemDTO;
 import com.example.bookShopDemo.model.entity.Book;
 import com.example.bookShopDemo.model.entity.ShoppingCart;

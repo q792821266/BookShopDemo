@@ -1,6 +1,5 @@
 package com.example.bookShopDemo.model.entity;
 
-import com.example.bookShopDemo.model.dto.BookDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.util.Assert;

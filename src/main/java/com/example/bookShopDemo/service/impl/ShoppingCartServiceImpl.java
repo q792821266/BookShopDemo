@@ -4,7 +4,6 @@ import com.example.bookShopDemo.mapper.BookMapper;
 import com.example.bookShopDemo.model.dto.ShoppingCartItemDTO;
 import com.example.bookShopDemo.model.entity.Book;
 import com.example.bookShopDemo.model.entity.ShoppingCart;
-import com.example.bookShopDemo.model.entity.ShoppingCartItem;
 import com.example.bookShopDemo.repository.BookRepository;
 import com.example.bookShopDemo.repository.ShoppingCartRepository;
 import com.example.bookShopDemo.service.ShoppingCartService;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class ShoppingCartServiceImpl implements ShoppingCartService {

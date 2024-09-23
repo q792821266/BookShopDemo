@@ -2,7 +2,6 @@ package com.example.bookShopDemo.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.Min;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -15,7 +14,7 @@ public class Book {
     private Long id;
     private String title;
     private String author;
-    @DecimalMin(value = "0.1")
+    @DecimalMin(value = "0",inclusive = false)
     private BigDecimal price;
     private String category;
 
